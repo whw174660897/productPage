@@ -164,6 +164,11 @@
     .cta{margin:20px 0 0;padding:52px 34px;text-align:center;border:1px solid var(--line2);border-radius:22px;background:radial-gradient(600px 300px at 50% 0,rgba(184,243,90,.13),transparent),linear-gradient(180deg,#101b2d,#091423)}
     .cta h2{font-size:clamp(30px,4vw,44px);line-height:1.2}
     .cta p{max-width:640px;margin:16px auto 28px;color:var(--muted)}
+    .shot-wrap{position:relative;background:#0b1424;min-height:150px}
+    .shot-wrap::before{content:"管理台截图加载中";position:absolute;inset:0;display:grid;place-items:center;color:var(--dim);font-size:13px;z-index:0}
+    .shot-wrap img{position:relative;z-index:1;background:#0b1424}
+    .repo-link{color:var(--cyan);font-weight:900}
+    .repo-link:hover{color:var(--lime)}
     footer{border-top:1px solid var(--line);padding:34px 0;color:var(--dim);text-align:center;font-size:13px;background:#070d17}
 
     .fade-up{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
@@ -202,6 +207,7 @@
         <a href="#architecture">架构</a>
         <a href="#features">能力</a>
         <a href="#install">安装</a>
+        <a href="https://atomgit.com/whw174660897/ObsidianKnowgrah_releases" target="_blank" rel="noopener">发布仓库</a>
         <a class="nav-cta" href="#install">开始部署</a>
       </nav>
     </div>
@@ -217,6 +223,7 @@
           <div class="hero-actions">
             <a class="btn btn-primary" href="#architecture">查看产品架构</a>
             <a class="btn btn-ghost" href="#install">复制安装命令</a>
+            <a class="btn btn-ghost" href="https://atomgit.com/whw174660897/ObsidianKnowgrah_releases" target="_blank" rel="noopener">打开发布仓库</a>
           </div>
           <div class="hero-stats">
             <div class="stat"><b>3</b><span>核心运行组件</span></div>
@@ -228,8 +235,8 @@
         <div class="showcase fade-up">
           <div class="window-head"><i></i><i></i><i></i><span>obsidian://knowledge-base-copilot</span></div>
           <div class="screen">
-            <div class="screen-main">
-              <img src="https://whw174660897.github.io/productPage/docs/image/README-05.png" alt="Knowledge Base Copilot 管理台截图">
+            <div class="screen-main shot-wrap">
+              <img src="./image/README-05.png" alt="Knowledge Base Copilot 管理台截图" onerror="this.style.display='none'; this.parentElement.setAttribute('data-error','true');">
             </div>
             <div class="screen-caption">
               <div class="cap"><b>知识导入</b>URL、本地文件、文章进入统一摄取层</div>
@@ -425,6 +432,7 @@ KB ERROR   <span class="c"># 服务未运行或连接失败</span></pre>
           <p>从收藏资料到调度知识，把 Obsidian 变成个人知识工作的 AI 控制台。</p>
           <div class="hero-actions" style="justify-content:center">
             <a class="btn btn-primary" href="#install">部署本地服务</a>
+            <a class="btn btn-ghost" href="https://atomgit.com/whw174660897/ObsidianKnowgrah_releases" target="_blank" rel="noopener">访问 AtomGit 发布仓库</a>
             <a class="btn btn-ghost" href="#architecture">回看架构</a>
           </div>
         </div>
@@ -433,7 +441,11 @@ KB ERROR   <span class="c"># 服务未运行或连接失败</span></pre>
   </main>
 
   <footer>
-    <div class="container">Knowledge Base Copilot · Obsidian 本地知识智能体 · TypeScript + FastAPI + React</div>
+    <div class="container">
+      Knowledge Base Copilot · Obsidian 本地知识智能体 · TypeScript + FastAPI + React
+      <br>
+      发布仓库：<a class="repo-link" href="https://atomgit.com/whw174660897/ObsidianKnowgrah_releases" target="_blank" rel="noopener">atomgit.com/whw174660897/ObsidianKnowgrah_releases</a>
+    </div>
   </footer>
 
   <script>
